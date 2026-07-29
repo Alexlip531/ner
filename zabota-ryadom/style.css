@@ -1,0 +1,17 @@
+/*
+Theme Name: Zabota Ryadom
+Theme URI: https://github.com/Alexlip531/ner
+Author: Alexlip531
+Author URI: https://github.com/Alexlip531
+Description: Тема «Забота рядом» — уход за пожилыми. Пансионаты, сиделки, уход на дому. Создана для каталога учреждений по уходу за пожилыми людьми с блоками hero, услуг, ситуаций, калькулятора, карты и каталога.
+Version: 1.0.0
+Requires at least: 5.5
+Tested up to: 6.5
+Requires PHP: 7.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: zabota-ryadom
+Tags: care, elderly, nursing-home, directory, catalog, green, light, two-columns, custom-menu, custom-colors, custom-logo
+*/
+
+/* Сброс и базовые стили в assets/css/main.css */

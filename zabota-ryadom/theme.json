@@ -1,0 +1,88 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1280px"
+		},
+		"color": {
+			"palette": [
+				{ "slug": "primary", "color": "#10B981", "name": "Primary" },
+				{ "slug": "primary-dark", "color": "#047857", "name": "Primary Dark" },
+				{ "slug": "primary-light", "color": "#D1FAE5", "name": "Primary Light" },
+				{ "slug": "secondary", "color": "#0F766E", "name": "Secondary" },
+				{ "slug": "accent", "color": "#F59E0B", "name": "Accent" },
+				{ "slug": "text", "color": "#111827", "name": "Text" },
+				{ "slug": "text-muted", "color": "#6B7280", "name": "Text Muted" },
+				{ "slug": "bg", "color": "#FFFFFF", "name": "Background" },
+				{ "slug": "bg-soft", "color": "#F9FAFB", "name": "Background Soft" },
+				{ "slug": "bg-section", "color": "#F3F4F6", "name": "Background Section" },
+				{ "slug": "border", "color": "#E5E7EB", "name": "Border" }
+			],
+			"custom": true,
+			"customGradient": true,
+			"link": true
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+					"slug": "inter",
+					"name": "Inter"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "size": "13px", "name": "Small" },
+				{ "slug": "medium", "size": "15px", "name": "Medium" },
+				{ "slug": "large", "size": "20px", "name": "Large" },
+				{ "slug": "x-large", "size": "30px", "name": "Extra Large" },
+				{ "slug": "xx-large", "size": "42px", "name": "XX Large" }
+			]
+		},
+		"spacing": {
+			"units": ["px", "em", "rem", "%", "vw"],
+			"padding": true,
+			"margin": true
+		},
+		"border": {
+			"radius": true
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#FFFFFF",
+			"text": "#111827"
+		},
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+			"fontSize": "15px",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "#047857"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "42px",
+					"fontWeight": "800"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "30px",
+					"fontWeight": "700"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "20px",
+					"fontWeight": "700"
+				}
+			}
+		}
+	}
+}
