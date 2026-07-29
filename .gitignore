@@ -1,0 +1,35 @@
+# Запрещённые файлы WordPress
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Конфигурации среды
+.env
+.env.local
+wp-config-local.php
+wp-config-sample.php
+
+# Папки разработки
+node_modules/
+vendor/
+build/
+dist/
+tests/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

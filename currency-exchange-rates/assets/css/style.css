@@ -1,0 +1,366 @@
+/**
+ * Currency Exchange Rates — фронтенд-стили.
+ *
+ * @package CurrencyExchangeRates
+ */
+
+/* ---------- Обёртка ---------- */
+.cer-wrapper {
+	--cer-bg: #ffffff;
+	--cer-text: #1f2933;
+	--cer-muted: #6b7280;
+	--cer-border: #e5e7eb;
+	--cer-up: #16a34a;
+	--cer-down: #dc2626;
+	--cer-no-change: #6b7280;
+	--cer-accent: #2563eb;
+	--cer-radius: 8px;
+	--cer-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+	background: var(--cer-bg);
+	color: var(--cer-text);
+	border: 1px solid var(--cer-border);
+	border-radius: var(--cer-radius);
+	box-shadow: var(--cer-shadow);
+	padding: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+.cer-wrapper *,
+.cer-wrapper *::before,
+.cer-wrapper *::after {
+	box-sizing: border-box;
+}
+
+/* ---------- Шапка ---------- */
+.cer-header,
+.cer-header-compact {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 16px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--cer-border);
+}
+
+.cer-title {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--cer-text);
+}
+
+.cer-date {
+	font-size: 12px;
+	color: var(--cer-muted);
+}
+
+/* ---------- Таблица ---------- */
+.cer-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+	font-size: 14px;
+}
+
+.cer-table thead th {
+	text-align: left;
+	padding: 10px 8px;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--cer-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	border-bottom: 2px solid var(--cer-border);
+}
+
+.cer-table tbody td {
+	padding: 12px 8px;
+	border-bottom: 1px solid var(--cer-border);
+	vertical-align: middle;
+}
+
+.cer-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.cer-table tbody tr:hover {
+	background: #f9fafb;
+}
+
+.cer-th-value,
+.cer-th-change,
+.cer-td-value,
+.cer-td-change {
+	text-align: right;
+}
+
+.cer-td-code {
+	font-weight: 700;
+	color: var(--cer-accent);
+}
+
+.cer-td-name {
+	font-weight: 500;
+}
+
+.cer-nominal {
+	display: block;
+	font-size: 11px;
+	color: var(--cer-muted);
+	font-weight: 400;
+}
+
+.cer-td-flag,
+.cer-th-flag {
+	text-align: center;
+	width: 36px;
+}
+
+.cer-flag {
+	font-size: 18px;
+	line-height: 1;
+}
+
+/* ---------- Карточки ---------- */
+.cer-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 12px;
+}
+
+.cer-card {
+	border: 1px solid var(--cer-border);
+	border-radius: var(--cer-radius);
+	padding: 14px;
+	background: #fff;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cer-card:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--cer-shadow);
+}
+
+.cer-card-top {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 6px;
+}
+
+.cer-card-code {
+	font-weight: 700;
+	font-size: 15px;
+	color: var(--cer-accent);
+}
+
+.cer-card-nominal {
+	font-size: 11px;
+	color: var(--cer-muted);
+	margin-left: auto;
+}
+
+.cer-card-name {
+	font-size: 12px;
+	color: var(--cer-muted);
+	margin-bottom: 8px;
+	min-height: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cer-card-value {
+	display: flex;
+	align-items: baseline;
+	gap: 4px;
+	margin-bottom: 6px;
+}
+
+.cer-value {
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--cer-text);
+}
+
+.cer-unit {
+	font-size: 14px;
+	color: var(--cer-muted);
+}
+
+.cer-card-change {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* ---------- Компактный список ---------- */
+.cer-compact-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.cer-compact-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 6px 0;
+	border-bottom: 1px dashed var(--cer-border);
+}
+
+.cer-compact-item:last-child {
+	border-bottom: none;
+}
+
+.cer-compact-flag-code {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 70px;
+}
+
+.cer-compact-code {
+	font-weight: 700;
+	color: var(--cer-accent);
+}
+
+.cer-compact-value {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.cer-compact-change {
+	font-size: 12px;
+	font-weight: 600;
+	min-width: 60px;
+	text-align: right;
+}
+
+/* ---------- Изменения курса ---------- */
+.cer-up,
+.cer-change.cer-up,
+.cer-card-change.cer-up,
+.cer-compact-change.cer-up {
+	color: var(--cer-up);
+}
+
+.cer-down,
+.cer-change.cer-down,
+.cer-card-change.cer-down,
+.cer-compact-change.cer-down {
+	color: var(--cer-down);
+}
+
+.cer-no-change,
+.cer-change.cer-no-change,
+.cer-card-change.cer-no-change,
+.cer-compact-change.cer-no-change {
+	color: var(--cer-no-change);
+}
+
+/* ---------- Подвал ---------- */
+.cer-footer {
+	margin-top: 16px;
+	padding-top: 12px;
+	border-top: 1px solid var(--cer-border);
+	text-align: right;
+}
+
+.cer-source {
+	font-size: 11px;
+	color: var(--cer-muted);
+}
+
+/* ---------- Ошибка ---------- */
+.cer-error {
+	padding: 12px 16px;
+	background: #fef2f2;
+	color: #991b1b;
+	border: 1px solid #fecaca;
+	border-radius: var(--cer-radius);
+	font-size: 13px;
+}
+
+/* ---------- Виджет ---------- */
+.cer-widget-inner {
+	padding: 12px;
+}
+
+.cer-widget .cer-title {
+	font-size: 15px;
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 640px) {
+	.cer-wrapper {
+		padding: 14px;
+	}
+
+	.cer-table thead {
+		display: none;
+	}
+
+	.cer-table,
+	.cer-table tbody,
+	.cer-table tr,
+	.cer-table td {
+		display: block;
+		width: 100%;
+	}
+
+	.cer-table tr {
+		border-bottom: 1px solid var(--cer-border);
+		padding: 8px 0;
+	}
+
+	.cer-table td {
+		border: none;
+		padding: 4px 0;
+		text-align: left;
+	}
+
+	.cer-td-flag,
+	.cer-td-value,
+	.cer-td-change {
+		text-align: left;
+	}
+
+	.cer-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ---------- Тёмная тема (если сайт использует dark mode) ---------- */
+@media (prefers-color-scheme: dark) {
+	.cer-wrapper {
+		--cer-bg: #1f2937;
+		--cer-text: #f3f4f6;
+		--cer-muted: #9ca3af;
+		--cer-border: #374151;
+		--cer-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+
+	.cer-table tbody tr:hover {
+		background: #374151;
+	}
+
+	.cer-card {
+		background: #374151;
+	}
+
+	.cer-error {
+		background: #7f1d1d;
+		color: #fee2e2;
+		border-color: #991b1b;
+	}
+}
