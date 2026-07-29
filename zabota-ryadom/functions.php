@@ -75,9 +75,11 @@ function zr_enqueue_assets() {
         // Основной стиль темы.
         wp_enqueue_style( 'zr-style', get_stylesheet_uri(), array(), ZR_VERSION );
         wp_enqueue_style( 'zr-main', ZR_URI . '/assets/css/main.css', array( 'zr-style' ), ZR_VERSION );
+        wp_enqueue_style( 'zr-catalog', ZR_URI . '/assets/css/catalog.css', array( 'zr-main' ), ZR_VERSION );
 
         // Основной скрипт.
         wp_enqueue_script( 'zr-script', ZR_URI . '/assets/js/main.js', array(), ZR_VERSION, true );
+        wp_enqueue_script( 'zr-catalog', ZR_URI . '/assets/js/catalog.js', array( 'zr-script' ), ZR_VERSION, true );
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
                 wp_enqueue_script( 'comment-reply' );
